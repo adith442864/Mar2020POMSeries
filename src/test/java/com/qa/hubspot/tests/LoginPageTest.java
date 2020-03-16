@@ -4,9 +4,12 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.qa.hubspot.base.BasePage;
@@ -26,13 +29,25 @@ public class LoginPageTest {
 	HomePage homePage;
 	Credentials userCred;
 	
-	@BeforeTest
-	public void setUp() {
+	
+	@BeforeMethod
+	@Parameters(value= {"browser"})
+	public void setUp(String browser) {
 		
-		basePage= new BasePage();
+		String browserName = null;
+		basePage = new BasePage();
 		prop = basePage.init_properties();
-		String browser = prop.getProperty("browser");
-		driver = basePage.init_driver(browser);
+		
+		if(browser.equals(null) || browser.equals("") || browser.isEmpty()){
+			 browserName = prop.getProperty("browser");
+		}else{
+			browserName = browser;
+		}
+		
+//		basePage = new BasePage();
+//		prop = basePage.init_properties();
+//		String browser = prop.getProperty("browser");
+		driver = basePage.init_driver(browserName);
 		driver.get(prop.getProperty("url"));
 		loginPage = new LoginPage(driver);
 		userCred = new Credentials(prop.getProperty("username"), prop.getProperty("password"));
@@ -52,7 +67,7 @@ public class LoginPageTest {
 		Assert.assertTrue(loginPage.checkSignUpLink());
 	}
 	
-	@Test(priority=3)
+	@Test(priority=3,enabled=true)
 	public void doLoginTest()  {
 		homePage = loginPage.doLogin(userCred);
 		String accountName = homePage.getLoggedInUserAccountName();
@@ -81,7 +96,7 @@ public class LoginPageTest {
 		Assert.assertTrue(loginPage.checkLoginErrorMsg());
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void tearDown() {
 		driver.quit();
 	}
