@@ -31,7 +31,8 @@ public class LoginPageTest {
 	
 	@BeforeMethod
 //	@Parameters(value={"browser"})
-	public void setUp() {
+	public void setUp(
+			) {
 //		String browserName = null;
 		basePage = new BasePage();
 		prop = basePage.init_properties();

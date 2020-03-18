@@ -2,44 +2,44 @@
 <testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="55667" started-at="2020-03-18T13:59:12 IST" finished-at="2020-03-18T14:00:08 IST">
+  <suite name="Default suite" duration-ms="56631" started-at="2020-03-18T15:58:57 IST" finished-at="2020-03-18T15:59:54 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="55667" started-at="2020-03-18T13:59:12 IST" finished-at="2020-03-18T14:00:08 IST">
+    <test name="Default test" duration-ms="56631" started-at="2020-03-18T15:58:57 IST" finished-at="2020-03-18T15:59:54 IST">
       <class name="com.qa.hubspot.tests.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="setUp" is-config="true" duration-ms="10814" started-at="2020-03-18T13:59:13 IST" finished-at="2020-03-18T13:59:23 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="setUp" is-config="true" duration-ms="11388" started-at="2020-03-18T15:58:57 IST" finished-at="2020-03-18T15:59:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="verifyLoginPageTitleTest" duration-ms="5003" started-at="2020-03-18T13:59:23 IST" finished-at="2020-03-18T13:59:28 IST">
+        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="verifyLoginPageTitleTest" duration-ms="6073" started-at="2020-03-18T15:59:09 IST" finished-at="2020-03-18T15:59:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="tearDown" is-config="true" duration-ms="666" started-at="2020-03-18T13:59:28 IST" finished-at="2020-03-18T13:59:29 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="tearDown" is-config="true" duration-ms="647" started-at="2020-03-18T15:59:15 IST" finished-at="2020-03-18T15:59:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="setUp" is-config="true" duration-ms="9807" started-at="2020-03-18T13:59:29 IST" finished-at="2020-03-18T13:59:39 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="setUp" is-config="true" duration-ms="9688" started-at="2020-03-18T15:59:15 IST" finished-at="2020-03-18T15:59:25 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="verifySignUpLinkTest" duration-ms="5757" started-at="2020-03-18T13:59:39 IST" finished-at="2020-03-18T13:59:45 IST">
+        <test-method status="PASS" signature="verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="verifySignUpLinkTest" duration-ms="5544" started-at="2020-03-18T15:59:25 IST" finished-at="2020-03-18T15:59:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignUpLinkTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="tearDown" is-config="true" duration-ms="699" started-at="2020-03-18T13:59:45 IST" finished-at="2020-03-18T13:59:45 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="tearDown" is-config="true" duration-ms="663" started-at="2020-03-18T15:59:31 IST" finished-at="2020-03-18T15:59:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="setUp" is-config="true" duration-ms="10007" started-at="2020-03-18T13:59:45 IST" finished-at="2020-03-18T13:59:55 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="setUp" is-config="true" duration-ms="10277" started-at="2020-03-18T15:59:31 IST" finished-at="2020-03-18T15:59:42 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="doLoginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="doLoginTest" duration-ms="12198" started-at="2020-03-18T13:59:55 IST" finished-at="2020-03-18T14:00:07 IST">
+        <test-method status="PASS" signature="doLoginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="doLoginTest" duration-ms="11625" started-at="2020-03-18T15:59:42 IST" finished-at="2020-03-18T15:59:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="tearDown" is-config="true" duration-ms="665" started-at="2020-03-18T14:00:07 IST" finished-at="2020-03-18T14:00:08 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@74650e52]" name="tearDown" is-config="true" duration-ms="675" started-at="2020-03-18T15:59:53 IST" finished-at="2020-03-18T15:59:54 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
