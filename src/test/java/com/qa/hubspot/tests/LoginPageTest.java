@@ -29,29 +29,23 @@ public class LoginPageTest {
 	HomePage homePage;
 	Credentials userCred;
 	
-	
 	@BeforeMethod
-	@Parameters(value= {"browser"})
-	public void setUp(String browser) {
-		
-		String browserName = null;
+//	@Parameters(value={"browser"})
+	public void setUp() {
+//		String browserName = null;
 		basePage = new BasePage();
 		prop = basePage.init_properties();
-		
-		if(browser.equals(null) || browser.equals("") || browser.isEmpty()){
-			 browserName = prop.getProperty("browser");
-		}else{
-			browserName = browser;
-		}
-		
-//		basePage = new BasePage();
-//		prop = basePage.init_properties();
-//		String browser = prop.getProperty("browser");
+				
+//		if(browser.equals(null)) {
+//			 browserName = prop.getProperty("browser");
+//		}else{
+//			browserName = browser;
+//		}
+		String browserName = prop.getProperty("browser");
 		driver = basePage.init_driver(browserName);
 		driver.get(prop.getProperty("url"));
 		loginPage = new LoginPage(driver);
 		userCred = new Credentials(prop.getProperty("username"), prop.getProperty("password"));
-		
 	}
 	
 	@Test(priority=1)
