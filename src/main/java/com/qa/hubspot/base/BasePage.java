@@ -18,17 +18,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage {
 	
-//	public WebDriver driver;
+	public WebDriver driver;
 	public Properties prop;
 	public static boolean highlightElement;
-	public OptionsManager optionsManager;
-	
-	public static ThreadLocal<WebDriver> tldriver = new ThreadLocal<WebDriver>();
-	
-	public static synchronized WebDriver getDriver() {
-		return tldriver.get();
-	}
-	
+	public OptionsManager optionsManager;	
 	
 	public WebDriver init_driver(String browserName) {
 		
@@ -39,8 +32,8 @@ public class BasePage {
 		if(browserName.equals("chrome")) {
 			
 			WebDriverManager.chromedriver().setup();
-			//driver = new ChromeDriver(optionsManager.getChromeOptions());
-			tldriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
+			driver = new ChromeDriver(optionsManager.getChromeOptions());
+//			tldriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
 		
 //			if(prop.getProperty("headless").equalsIgnoreCase("yes")) {
 //				ChromeOptions co= new ChromeOptions();
@@ -54,8 +47,8 @@ public class BasePage {
 		}
 		else if(browserName.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			//driver = new FirefoxDriver(optionsManager.getFirefoxOptions());
-			tldriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
+			driver = new FirefoxDriver(optionsManager.getFirefoxOptions());
+//			tldriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
 			
 //			if(prop.getProperty("headless").equalsIgnoreCase("yes")) {
 //				FirefoxOptions fo = new FirefoxOptions();
@@ -69,20 +62,20 @@ public class BasePage {
 		}
 		else if(browserName.equals("Edge")) {
 			WebDriverManager.edgedriver().setup();
-			//driver = new EdgeDriver();
-			tldriver.set(new EdgeDriver());
+			driver = new EdgeDriver();
+//			tldriver.set(new EdgeDriver());
 			
 		}
 		else {
 			System.out.println("browser name "+browserName +"is not found, please pass the correct browser");
 		}
 		
-		getDriver().manage().deleteAllCookies();
+		driver.manage().deleteAllCookies();
 //		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		getDriver().manage().window().maximize();
+		driver.manage().window().maximize();
 		
 //		driver.get("https://app.hubspot.com/login");
-		return getDriver();
+		return driver;
 		
 	}
 	
@@ -125,7 +118,7 @@ public class BasePage {
 	 * @return
 	 */
 	public String getScreenshot() {
-		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
 		File destination = new File(path);
 

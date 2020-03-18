@@ -26,7 +26,7 @@ public class ScreenshotListener extends TestListenerAdapter {
         String methodName = result.getName();
         
         if(!result.isSuccess()){
-            File scrFile = ((TakesScreenshot)basePage.getDriver()).getScreenshotAs(OutputType.FILE);
+            File scrFile = ((TakesScreenshot)basePage.driver).getScreenshotAs(OutputType.FILE);
             try {
                 String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/target/surefire-reports";
                 File destFile = new File((String) reportDirectory+"/failure_screenshots/"+methodName+"_"+formater.format(calendar.getTime())+".png");
