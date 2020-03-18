@@ -123,7 +123,7 @@
 				<version>2.20</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testrunners/testng_parallel.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/testrunners/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
